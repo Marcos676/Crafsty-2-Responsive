@@ -1,0 +1,277 @@
+:root{/*  :root  para crear variables y ponerle valores */
+    --colorOrance: orangered;
+    --colorBorde: #aedbe5;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+li{
+    list-style: none;
+    display: inline;
+    margin-right: 5px;
+}
+
+body{
+    background-image: url("../images/bg-2.png");
+    font-family: 'roboto';
+    font-size: 16px;
+}
+.home{
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* HEADER */
+
+header{
+    background-color: var(--colorOrance);
+    overflow: hidden;
+    padding: 15px 1px;
+    position: fixed;
+    width: 90%;
+    z-index: 1;
+    margin: auto 5%;
+}
+header a img{
+    float: left;
+    margin-right: 20px;
+}
+ul.ingreso{
+    float: right;
+    margin: 10px 0;
+}
+ul.menu{
+    float: left;
+    display: inline-flex;
+    margin-top: 10px;
+}
+li a{
+    margin: 5px 5px;
+
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: all .5s;
+}
+li a:hover {
+    background-size: 100% 2px;
+}
+
+/* PRODUCTOS */
+main{
+    background-color: white;
+    width: 90%;
+    margin: 110px 0 30px 5%;
+    overflow: hidden;
+}
+main article{
+    padding: 10px;
+    position: relative;
+}
+
+main article img.foto{
+    width: 100%;
+}
+main article img.etiqueta{
+    position: absolute;
+    right: 15px;
+    top: 0;
+    padding: 10px;
+}
+
+main article h3{
+    margin: 20px 0;
+}
+main article a{
+    background-color: var(--colorOrance);
+    padding: 10px;
+    display: inline-block;
+    margin: 15px auto;
+    transition: all .5s;
+}
+main article a:hover {
+    background-color: rgba(255, 68, 0, 0.644);
+    color: black;
+}
+
+/* PUBLICIDAD */
+aside section{
+    overflow: hidden;
+}
+aside{
+    width: 90%;
+    margin: 0 auto;
+}
+aside section h2{
+    background-color: white;
+    padding: 10px 5px;
+    margin: 20px 0;
+}
+aside section article{
+    background-color: white;
+    border: 2px solid var(--colorBorde);
+    margin: 10px 0;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+aside section img.foto{
+float: left;
+}
+aside section img.etiqueta{
+position: absolute;
+top: 0px;
+width:50px;
+right: 15px;
+}
+aside section a{
+float: left;
+display: block;
+width: 150px;
+margin-top: 20px;
+margin-left: 10px;
+}
+aside section.publicidad article img{
+    width: 95%;
+    margin: 0 2.5%;
+}
+
+/* FORMULARIOS */
+main.formulario {
+    background: transparent;
+}
+div.form{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .form div {
+      margin-bottom: 25px;
+  }
+  .form h1 {
+    text-align: center;
+    font-size: 33px;
+  }
+  .input input{
+    width: 100%;
+    margin-top: 10px;
+    border: rgba(128, 128, 128, 0.644) 1px solid;
+    height: 30px;
+  }
+  .input input:hover{
+    border: solid 1px orangered
+  }
+  select:hover{
+      border: solid 1px orangered
+  }
+  div .recordar{
+    text-align: right;
+    transition: all .5s;
+    text-decoration: underline transparent;
+  }
+  div .recordar:hover{
+    text-decoration: underline;
+  }
+  
+  .aviso{
+    color: red;
+    font-size: 15px;
+    margin: 5px auto;
+  }
+  button {
+    border: none;
+    background-color: rgba(37, 111, 160, 0.822);
+    color: white;
+    padding: 5px 35px;
+    border-radius: 10px;
+    transition: all .3s;
+    margin-top: 10px;
+  }
+  button:hover{
+    border: rgb(0, 0, 0) 2px solid;
+  }
+  .subtitulos{
+    display: block;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .campos input {
+      margin: auto 1px;
+  }
+  .campos label:hover{
+    font-weight: bold;
+  }
+  textarea:hover{
+    border: solid 1px orangered
+  }
+  p input {
+    margin-right: 10px; 
+  }
+  div .terminos{
+    text-align: left;
+    margin: 20px 0;
+  }
+
+  
+
+/* TABLET */
+@media(min-width:426px){
+    main {
+        margin: 110px 0 30px 5%;
+    }
+    main article{
+        width: 50%;
+        float: left;
+    }
+    aside section article{
+        width: 50%;
+        float: left;
+    }
+}
+/* LAPTOP */
+@media(min-width:769px){
+    header{
+    margin: auto 2.5% auto 6%;
+    width: 87.5%;
+    }
+    li a{
+        margin: 5px 10px;
+    }
+    main{
+        width: 60%;
+        float: left;
+        margin: 90px 2.5% 30px 6%;
+    }
+    aside{
+        width: 25%;
+        margin: 20px 0;
+        float: left;
+        margin-top: 90px;
+    }
+    aside section h2{
+        margin: 0px 0px 5px 0px;
+    }
+    aside section article{
+        width: 100%;
+        margin: 5px 0;
+    }
+    aside section.publicidad h2{
+        margin: 20px 0 5px 0;
+    }
+    /* formulario */
+    main.formulario {
+        margin: 20vh 25vw;
+    }
+}
+
